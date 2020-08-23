@@ -13,3 +13,8 @@ jobs:
         pip install platformio
     - name: Run PlatformIO
       run: platformio run
+    - name: Attach artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: firmware_esp32
+        path: .pio/build/m5stack-core-esp32/firmware.bin
